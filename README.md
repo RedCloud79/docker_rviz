@@ -81,11 +81,27 @@ x11displayoffset 10
 x11uselocalhost yes
 ```
 
-`xauth`가 없으면 설치:
+`xauth`가 없으면 설치(서버 pc에서 패키지를 scp를 통해서 전달 할 수도 있음):
 인터넷이 안되는경우 - `witch xauth` 를 통해서 경로 확인
 
 ```bash
 sudo apt install -y xauth
+```
+or
+
+```bash
+#서버 pc에서 진행
+mkdir -p ~/xauth_offline
+
+sudo apt install --download-only xauth
+cp /var/cache/apt/archives/*.deb ~/xauth_offline/
+
+scp ~/xauth_offline/*.deb user@10.21.31.104:/tmp/xauth_offline/
+
+
+# 로봇에 접속해서 진행
+cd /tmp/xauth_offline
+sudo dpkg -i *.deb
 ```
 
 SSH 설정 수정:
