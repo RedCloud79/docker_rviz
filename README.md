@@ -94,6 +94,8 @@ or
 mkdir -p ~/xauth_offline
 
 sudo apt install --download-only xauth
+# 아키텍처가 다른경우
+apt download xauth:arm64
 cp /var/cache/apt/archives/*.deb ~/xauth_offline/
 
 scp ~/xauth_offline/*.deb user@10.21.31.104:/tmp/xauth_offline/
