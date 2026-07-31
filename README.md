@@ -183,7 +183,7 @@ sudo docker exec -it \
     unset ROS_HOSTNAME
     unset LIBGL_ALWAYS_SOFTWARE
 
-    rviz
+    rviz -d /root/catkin_ws/src/navigation_3d/hdl_localization/rviz/hdl_localization.rviz
   '
 ```
 
@@ -273,7 +273,7 @@ sudo docker exec -it \
     export ROS_IP=10.21.31.104
     unset ROS_HOSTNAME
 
-    rviz
+    rviz -d /root/catkin_ws/src/navigation_3d/hdl_localization/rviz/hdl_localization.rviz
   '
 ```
 
@@ -358,7 +358,7 @@ sudo docker exec -it \
     unset ROS_HOSTNAME
     unset LIBGL_ALWAYS_SOFTWARE
 
-    rviz
+    rviz -d /root/catkin_ws/src/navigation_3d/hdl_localization/rviz/hdl_localization.rviz
   '
 ```
 
@@ -393,7 +393,7 @@ sudo docker exec -it \
     unset ROS_HOSTNAME
     unset LIBGL_ALWAYS_SOFTWARE
 
-    rviz
+    rviz -d /root/catkin_ws/src/navigation_3d/hdl_localization/rviz/hdl_localization.rviz
   '
 ```
 조건:
