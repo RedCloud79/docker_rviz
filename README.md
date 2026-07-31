@@ -82,6 +82,7 @@ x11uselocalhost yes
 ```
 
 `xauth`가 없으면 설치:
+인터넷이 안되는경우 - `witch xauth` 를 통해서 경로 확인
 
 ```bash
 sudo apt install -y xauth
