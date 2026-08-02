@@ -1,0 +1,14 @@
+
+width: 60
+height: 60
+
+plugins:
+  - {name: static_layer, type: "costmap_2d::StaticLayer"} 
+  - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer" }
+  - {name: inflation_layer, type: "costmap_2d::InflationLayer"} 
+  - {name: virtual_layer_global, type: "virtual_costmap_layer::VirtualLayer"} 
+
+# Global path keeps a slightly wider wall margin than the local planner.
+inflation_layer:
+  inflation_radius: 0.50
+  cost_scaling_factor: 3.0

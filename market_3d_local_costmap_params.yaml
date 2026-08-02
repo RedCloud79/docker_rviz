@@ -1,0 +1,23 @@
+local_costmap:
+  global_frame: map
+  robot_base_frame: base_footprint
+
+  update_frequency: 5.0
+  publish_frequency: 1.0
+  transform_tolerance: 2.0
+
+  footprint: [[0.34,0.275],[0.34,-0.275],[-0.34,-0.275],[-0.34,0.275]]
+  footprint_padding: 0.05
+
+  rolling_window: true
+  width: 10
+  height: 10
+  resolution: 0.03
+  plugins:
+    - { name: obstacle_layer, type: "costmap_2d::ObstacleLayer" }
+    - { name: virtual_layer_local, type: "virtual_costmap_layer::VirtualLayer" }
+    - { name: inflation_layer, type: "costmap_2d::InflationLayer" }
+  inflation_layer:
+    enabled: true
+    inflation_radius: 0.8
+    cost_scaling_factor: 15.0
